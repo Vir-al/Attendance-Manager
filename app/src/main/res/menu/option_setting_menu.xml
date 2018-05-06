@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="Help"
+        android:id="@+id/menu_help"/>
+    <item android:title="Feedback"
+        android:id="@+id/menu_feedback"/>
+    <item android:title="Credits"
+        android:id="@+id/menu_credits"
+        />
+
+</menu>

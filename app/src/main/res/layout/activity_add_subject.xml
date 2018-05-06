@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_add_subject"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/lightGray"
+    tools:context="me.viral.personalattendancemanager.AddSubject">
+
+    <TextView
+        android:text="Attendance Manager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/title"
+        android:layout_marginTop="5sp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/vector_asset_back"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-2sp"
+        android:layout_marginLeft="7sp"
+        android:id="@+id/backButton" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/vector_asset_menu"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="7dp"
+        android:id="@+id/action_menu"
+        android:background="@null"
+        android:padding="6sp"
+        android:layout_marginRight="-14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:text="Subject"
+        android:textSize="34sp"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="65dp"
+        android:id="@+id/textView"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Subject name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/subjectNameLabel"
+        android:layout_alignLeft="@+id/subjectName"
+        android:layout_above="@+id/subjectName"
+        android:layout_marginBottom="-43sp"
+        android:layout_marginLeft="13sp"
+        android:textColor="@color/colorPrimary"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="81sp"
+        android:padding="15sp"
+        android:id="@+id/subjectName"
+        android:hint="MP"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/input_background"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+
+    <TextView
+        android:text="Semester "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/semesterLabel"
+        android:layout_alignLeft="@+id/semester"
+        android:layout_above="@+id/semester"
+        android:layout_marginBottom="-36sp"
+        android:layout_marginLeft="13sp"
+        android:textColor="@color/colorPrimary"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_marginTop="38dp"
+        android:layout_marginLeft="81sp"
+        android:padding="15sp"
+        android:id="@+id/semester"
+        android:hint="Semester 6"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/input_background"
+        android:gravity="center"
+        android:layout_below="@+id/subjectName"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Minimum required "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/minRequiredLabel"
+        android:layout_alignLeft="@+id/minRequired"
+        android:layout_above="@+id/minRequired"
+        android:layout_marginBottom="-36sp"
+        android:layout_marginLeft="13sp"
+        android:textColor="@color/colorPrimary"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_marginTop="38dp"
+        android:layout_marginLeft="81sp"
+        android:padding="15sp"
+        android:id="@+id/minRequired"
+        android:hint="75 %"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/input_background"
+        android:gravity="center"
+        android:layout_below="@+id/semester"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="72sp"
+        android:layout_below="@+id/minRequired"
+        android:layout_marginTop="20dp"
+        android:layout_alignStart="@+id/minRequired"
+        android:layout_alignEnd="@+id/minRequired"
+        android:id="@+id/attendanceCountContainer">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Attended "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/attendedLabel"
+                android:layout_marginTop="-3sp"
+                android:layout_marginLeft="13sp"
+                android:textColor="@color/colorPrimary"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="7"
+                android:padding="15sp"
+                android:id="@+id/attended"
+                android:hint="Attended (0)"
+                android:text="0"
+                android:layout_marginTop="20sp"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/input_background"
+                android:gravity="center" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Bunked "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bunkedLabel"
+                android:layout_marginTop="-3sp"
+                android:layout_marginLeft="13sp"
+                android:layout_alignLeft="@+id/bunked"
+                android:textColor="@color/colorPrimary"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="7"
+                android:layout_marginLeft="30sp"
+                android:layout_marginRight="0sp"
+                android:padding="15sp"
+                android:id="@+id/bunked"
+                android:hint="Bunked (0)"
+                android:text="0"
+                android:layout_marginTop="20sp"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/input_background"
+                android:gravity="center" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addSubject"
+        android:layout_below="@+id/attendanceCountContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="Add"
+        android:textColor="@color/colorWhite"
+        android:textSize="17sp"
+        android:background="@drawable/add_subject_button_circle"/>
+
+
+</RelativeLayout>

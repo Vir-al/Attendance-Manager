@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGray">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:text="Feedback"
+        android:textSize="34sp"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="65dp"
+        android:id="@+id/textView"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Full name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/subjectNameLabel"
+        android:layout_alignLeft="@+id/fullName"
+        android:layout_above="@+id/fullName"
+        android:layout_marginBottom="-43sp"
+        android:layout_marginLeft="13sp"
+        android:textColor="@color/colorPrimary"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="81sp"
+        android:padding="15sp"
+        android:id="@+id/fullName"
+        android:hint="Viral Limbani"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/input_background"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+
+    <TextView
+        android:text="Feedback "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/semesterLabel"
+        android:layout_alignLeft="@+id/feedback"
+        android:layout_above="@+id/feedback"
+        android:layout_marginBottom="-36sp"
+        android:layout_marginLeft="13sp"
+        android:textColor="@color/colorPrimary"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="150sp"
+        android:inputType="text"
+        android:ems="10"
+        android:layout_marginTop="38dp"
+        android:layout_marginLeft="81sp"
+        android:padding="15sp"
+        android:id="@+id/feedback"
+        android:hint="Enter your feedback or query here."
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/input_background"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/fullName"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/feedbackSubmit"
+        android:layout_below="@+id/feedback"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="Send"
+        android:textColor="@color/colorWhite"
+        android:textSize="17sp"
+        android:background="@drawable/add_subject_button_circle"/>
+
+</RelativeLayout>

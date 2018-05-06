@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="0sp"
+    android:background="@color/lightGray"
+    tools:context="me.viral.personalattendancemanager.MainActivity">
+
+    <TextView
+        android:text="Attendance Manager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/title"
+        android:layout_marginTop="5sp"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/vector_asset_menu"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="7dp"
+        android:id="@+id/action_menu"
+        android:background="@null"
+        android:padding="6sp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/subjectListview"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="15sp"
+        android:dividerHeight="7sp"
+        android:divider="#00ffffff"
+        android:layout_above="@+id/add_subject_after"
+        android:paddingLeft="7sp"
+        android:paddingRight="7sp">
+
+    </ListView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/home_background"
+        android:layout_above="@+id/defaultMessage"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/home_background"
+        android:layout_marginRight="20sp"
+        android:layout_alignEnd="@+id/defaultMessage"
+        android:layout_alignStart="@+id/defaultImage"
+        android:layout_below="@+id/action_menu"
+        android:alpha="0.1"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/defaultMessage"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/defaultImage"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:text="Keep track of your attendance with ease!"
+            android:layout_width="297dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView3"
+            android:layout_marginTop="15sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:text="Click here to add subject."
+            android:layout_width="297dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView4"
+            android:layout_marginTop="7sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/vector_asset_add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/add_subject_before"
+        android:background="@drawable/add_subject_button_circle"
+        android:padding="17sp"/>
+
+    <ImageView
+        android:layout_width="225sp"
+        android:layout_height="225sp"
+        android:id="@+id/defaultImage"
+        android:src="@drawable/down_curved_arrow"
+        android:rotation="45"
+        android:layout_alignBottom="@+id/add_subject_before"
+        android:layout_toStartOf="@+id/add_subject_before"
+        android:alpha="0.2"/>
+
+    <!--<TextView-->
+        <!--android:text="TextView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/temp"-->
+        <!--android:layout_below="@+id/title"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginStart="9dp" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="180sp"-->
+    <!--android:layout_height="225sp"-->
+    <!--android:id="@+id/imageView"-->
+    <!--android:src="@drawable/down_curve_arrow"-->
+    <!--android:rotation="13"-->
+    <!--android:layout_alignBottom="@+id/add_subject"-->
+    <!--android:layout_toStartOf="@+id/add_subject"-->
+    <!--android:alpha="0.4"/>-->
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/add_subject_after"
+        android:text="Add Subject"
+        android:textSize="17sp"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/add_subject_button_ractangle"/>
+
+
+</RelativeLayout>

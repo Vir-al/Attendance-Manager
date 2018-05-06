@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="18sp"
+    android:background="@drawable/subject_row_background"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:text="Subject Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/subjectName"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"/>
+
+    <TextView
+        android:text="Minimum required : 75%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/minRequiredLabel"
+        android:textSize="13sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp"
+        android:textColor="@color/colorPrimary"
+        android:alpha="0.77"/>
+
+    <TextView
+        android:text="Sem : 6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/semesterLabel"
+        android:textSize="13sp"
+        android:layout_toRightOf="@+id/minRequiredLabel"
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="15sp"
+        android:textColor="@color/colorPrimary"
+        android:alpha="0.77"/>
+
+    <TextView
+        android:text="Last updated on 29 apr , 1:13 am"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/updateStatus"
+        android:textSize="11sp"
+        android:layout_below="@+id/minRequiredLabel"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5sp"
+        android:textColor="#737272" />
+
+    <TextView
+        android:text="Attendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="33dp"
+        android:id="@+id/attendanceLabel"
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:text="75%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/percentage"
+        android:background="@drawable/above_required_background"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_below="@+id/subjectName"
+        android:layout_alignEnd="@+id/attendanceLabel"
+        android:layout_marginRight="9sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/percentage"
+        android:layout_marginTop="15sp"
+        android:paddingTop="5sp">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Minimum Lectures to attend : 5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/predictLecture"
+                android:layout_weight="1"
+                android:layout_marginTop="50sp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35sp"
+                    android:layout_marginRight="0sp"
+                    android:paddingRight="18sp"
+                    android:background="@drawable/border_attended_bunked">
+
+                    <TextView
+                        android:text="Attended"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/attendedLabel" />
+
+                    <TextView
+                        android:text="15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/attendedCount"
+                        android:layout_below="@+id/attendedLabel"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginRight="20sp"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/vector_asset_add"
+                        android:id="@+id/incAttended"
+                        android:layout_marginLeft="12sp"
+                        android:layout_marginTop="17sp"
+                        android:layout_below="@+id/attendedCount"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/add_subject_button_circle"
+                        android:padding="5sp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17sp"
+                    android:layout_marginRight="0sp">
+
+                    <TextView
+                        android:text="Bunked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bunkedLabel" />
+
+                    <TextView
+                        android:text="15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bunkedCount"
+                        android:layout_below="@+id/bunkedLabel"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginLeft="17sp"
+                        android:layout_marginRight="20sp"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/vector_asset_add"
+                        android:id="@+id/incBunked"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginTop="17sp"
+                        android:layout_below="@+id/bunkedCount"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/add_subject_button_circle"
+                        android:padding="5sp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
